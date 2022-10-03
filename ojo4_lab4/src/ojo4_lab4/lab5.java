@@ -14,9 +14,9 @@ public class lab5 {
 		JOptionPane.showMessageDialog(null, result);
 	}
 	public static void main(String[] args) {
-		
-		int countNum = Integer.parseInt(JOptionPane.showInputDialog("Enter amount of dice rolls: "));
-		rollDice(new Random(), countNum);
-		
+		do {
+			int countNum = Integer.parseInt(JOptionPane.showInputDialog("Enter amount of dice rolls: "));
+			rollDice(new Random(), countNum);
+		}while(JOptionPane.showInputDialog("Do you want to continue (Yes/No): ").equals("Yes"));
 	}
 }
