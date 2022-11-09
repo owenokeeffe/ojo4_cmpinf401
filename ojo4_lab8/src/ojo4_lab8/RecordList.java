@@ -64,8 +64,8 @@ public class RecordList {
 	public int add(Record data) {
 		// Replace this with your own code. You can use the indexOf() method as a guide.
 		int index = 0;
-		if(head == null) {
-			head = new Node(data);
+		if(head.next == null) {
+			head.next = new Node(data);
 			return index;
 		}
 		
@@ -110,9 +110,9 @@ public class RecordList {
 		try {
 			FileWriter fw = new FileWriter(filename);
 			BufferedWriter bw = new BufferedWriter(fw);
-			Node currentNode = head;
+			Node currentNode = head.next;
 			while(currentNode.next != null) {
-				bw.write(currentNode.data.getName() + " , " + currentNode.data.getTime() + "/n");
+				bw.write(currentNode.data.getName() + " , " + currentNode.data.getTime() + "\n");
 				currentNode = currentNode.next;
 			}
 			bw.write(currentNode.data.getName() + " , " + currentNode.data.getTime());
