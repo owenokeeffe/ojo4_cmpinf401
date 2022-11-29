@@ -62,7 +62,7 @@ public class MenuManager {
 		Dessert lowestDessert = null;
 		
 		if(entrees.size() > 0) {
-			int lowest = Integer.MIN_VALUE;
+			int lowest = Integer.MAX_VALUE;
 			for(Entree e : entrees)
 				if(e.getCals() < lowest) {
 					lowest = e.getCals();
@@ -71,7 +71,7 @@ public class MenuManager {
 		}
 		
 		if(sides.size() > 0) {
-			int lowest = Integer.MIN_VALUE;
+			int lowest = Integer.MAX_VALUE;
 			for(Side s : sides)
 				if(s.getCals() < lowest) {
 					lowest = s.getCals();
@@ -80,7 +80,7 @@ public class MenuManager {
 		}
 		
 		if(salads.size() > 0) {
-			int lowest = Integer.MIN_VALUE;
+			int lowest = Integer.MAX_VALUE;
 			for(Salad s : salads)
 				if(s.getCals() < lowest) {
 					lowest = s.getCals();
@@ -89,7 +89,7 @@ public class MenuManager {
 		}
 		
 		if(desserts.size() > 0) {
-			int lowest = Integer.MIN_VALUE;
+			int lowest = Integer.MAX_VALUE;
 			for(Dessert d : desserts)
 				if(d.getCals() < lowest) {
 					lowest = d.getCals();
@@ -116,7 +116,7 @@ public class MenuManager {
 		Dessert highestDessert = null;
 		
 		if(entrees.size() > 0) {
-			int highest = Integer.MAX_VALUE;
+			int highest = Integer.MIN_VALUE;
 			for(Entree e : entrees)
 				if(e.getCals() > highest) {
 					highest = e.getCals();
@@ -125,7 +125,7 @@ public class MenuManager {
 		}
 		
 		if(sides.size() > 0) {
-			int highest = Integer.MAX_VALUE;
+			int highest = Integer.MIN_VALUE;
 			for(Side s : sides)
 				if(s.getCals() > highest) {
 					highest = s.getCals();
@@ -134,7 +134,7 @@ public class MenuManager {
 		}
 		
 		if(salads.size() > 0) {
-			int highest = Integer.MAX_VALUE;
+			int highest = Integer.MIN_VALUE;
 			for(Salad s : salads)
 				if(s.getCals() > highest) {
 					highest = s.getCals();
@@ -143,7 +143,7 @@ public class MenuManager {
 		}
 		
 		if(desserts.size() > 0) {
-			int highest = Integer.MAX_VALUE;
+			int highest = Integer.MIN_VALUE;
 			for(Dessert d : desserts)
 				if(d.getCals() > highest) {
 					highest = d.getCals();
