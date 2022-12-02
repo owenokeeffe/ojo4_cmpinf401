@@ -22,7 +22,13 @@ public class lab10 {
 	 }
 	 
 	 public static void printCombos(int[] a, String out, int startIndex, int k) {
-		 
+		 if(out.length() / 3 == k)
+				System.out.println("{" + out.substring(0, out.length() - 2) + "}");
+			for(int i = startIndex; i < (startIndex + k); i++) {
+				if(i > a.length - 1)
+					break;
+				printCombos(a, (out + a[i] + ", "), i + 1, k);
+			}
 	 }
 
 	 
@@ -33,6 +39,8 @@ public class lab10 {
 			 System.out.println("The sum of digits in " + number + " is " + result);
 			 int[] a = new int[] {2, 3, 1, 5, 6};
 			 printArrayElements(a, 0);
+			 System.out.println();
+			 printCombos(a, "", 0, 3);
 
 	}
 	 }
